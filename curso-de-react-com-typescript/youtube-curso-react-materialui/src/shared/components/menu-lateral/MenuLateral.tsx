@@ -1,17 +1,11 @@
 import {
-    Avatar,
-    Box,
-    Divider,
-    Drawer,
-    Icon,
-    List,
-    ListItemButton,
-    ListItemIcon,
-    ListItemText,
-    useMediaQuery,
-    useTheme
+    Avatar, Box, Divider, Drawer, Icon,
+    List, ListItemButton, ListItemIcon,
+    ListItemText, useMediaQuery, useTheme
 } from "@mui/material";
+
 import React from "react";
+import { useDrawerContext } from "../../contexts";
 
 interface MenuLateralProps {
     children: React.ReactNode;
@@ -21,9 +15,15 @@ export const MenuLateral: React.FC<MenuLateralProps> = ({ children }) => {
     const theme = useTheme();
     const smDown = useMediaQuery(theme.breakpoints.down('sm'));
 
+    const { isDrawerOpen, toggleDrawerOpen } = useDrawerContext();
+
     return (
         <>
-            <Drawer open={true} variant={smDown ? 'temporary' : 'permanent'}>
+            <Drawer
+                open={isDrawerOpen}
+                variant={smDown ? 'temporary' : 'permanent'}
+                onClose={toggleDrawerOpen}>
+
                 <Box
                     width={theme.spacing(28)}
                     height="100%"
@@ -39,7 +39,8 @@ export const MenuLateral: React.FC<MenuLateralProps> = ({ children }) => {
 
                         <Avatar
                             sx={{ height: theme.spacing(12), width: theme.spacing(12) }}
-                            src="https://yt3.ggpht.com/yti/ANjgQV9M1_PCQxm9zUJSwy9T-t4lq-1VHxsvco-cLCg5iKFFQhNl=s88-c-k-c0x00ffffff-no-rj" />
+                            src="https://yt3.ggpht.com/yti/ANjgQV9M1_PCQxm9zUJSwy9T-t4lq-1VHxsvco-cLCg5iKFFQhNl=s88-c-k-c0x00ffffff-no-rj"
+                        />
                     </Box>
 
                     <Divider />
@@ -58,7 +59,8 @@ export const MenuLateral: React.FC<MenuLateralProps> = ({ children }) => {
             </Drawer>
             <Box
                 height="100vh"
-                marginLeft={theme.spacing(28)}>
+                marginLeft={smDown ? 0 : theme.spacing(28)}>
+
                 {children}
             </Box>
         </>
