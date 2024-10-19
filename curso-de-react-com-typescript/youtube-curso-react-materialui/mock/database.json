@@ -37,12 +37,6 @@
       "nomeCompleto": "Antonio"
     },
     {
-      "id": 10,
-      "nomeCompleto": "Fernado Rodrigues",
-      "email": "fernando@email.com",
-      "cidadeId": "121"
-    },
-    {
       "id": 11,
       "nomeCompleto": "Elisabeth Rodrigues",
       "email": "beth@email.com",
@@ -65,9 +59,15 @@
       "email": "joao@email.com",
       "cidadeId": 2,
       "id": 14
+    },
+    {
+      "nomeCompleto": "Maria Fernanda",
+      "email": "maria@gmail.com",
+      "cidadeId": 1,
+      "id": 15
     }
   ],
-  "auth":{
-    "accessToken":"ssssssss.aaaaaaaaaaaaaaa.bbbbbbbbbbb"
+  "auth": {
+    "accessToken": "ssssssss.aaaaaaaaaaaaaaa.bbbbbbbbbbb"
   }
 }
