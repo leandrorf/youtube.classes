@@ -76,8 +76,8 @@ export const MenuLateral: React.FC<MenuLateralProps> = ({ children }) => {
                     <Divider key={1} />
 
                     <Box flex={1}>
-                        {drawerOptions.map(drawerOption => (
-                            <List component="nav">
+                        <List component="nav">
+                            {drawerOptions.map(drawerOption => (
                                 <ListItemLink
                                     key={drawerOption.path}
                                     icon={drawerOption.icon}
@@ -85,8 +85,8 @@ export const MenuLateral: React.FC<MenuLateralProps> = ({ children }) => {
                                     to={drawerOption.path}
                                     onClick={smDown ? toggleDrawerOpen : undefined}
                                 />
-                            </List>
-                        ))}
+                            ))}
+                        </List>
                     </Box>
 
                     <Box>

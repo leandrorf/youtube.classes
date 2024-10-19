@@ -37,9 +37,16 @@ export const DrawerProvider: React.FC<IDrawerProviderProps> = ({ children }) => 
 
 
     return (
-        <DrawerContext.Provider 
-            value={{ isDrawerOpen, drawerOptions, toggleDrawerOpen, setDrawerOptions: handleSetDrawerOptions }}>
-
+        <DrawerContext.Provider
+            value={
+                {
+                    isDrawerOpen,
+                    drawerOptions,
+                    toggleDrawerOpen,
+                    setDrawerOptions: handleSetDrawerOptions
+                }
+            }
+        >
             {children}
         </DrawerContext.Provider>
     )

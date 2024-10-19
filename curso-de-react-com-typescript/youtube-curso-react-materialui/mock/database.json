@@ -1,5 +1,73 @@
 {
-    "pessoas": 
-    [
-    ]
+  "cidades": [
+    {
+      "id": 1,
+      "nome": "Campinas"
+    },
+    {
+      "nome": "Valinhos",
+      "id": 2
+    },
+    {
+      "nome": "São Paulo",
+      "id": 3
+    },
+    {
+      "nome": "Hortolandia",
+      "id": 4
+    }
+  ],
+  "pessoas": [
+    {
+      "id": 4,
+      "nomeCompleto": "Leandro Rodrigues Fernandes Teste",
+      "email": "leandro@email.com",
+      "cidadeId": 1
+    },
+    {
+      "id": 8,
+      "email": "antonio@email.com",
+      "cidadeId": 1,
+      "nomeCompleto": "Antonio"
+    },
+    {
+      "id": 9,
+      "email": "antonio@email.com",
+      "cidadeId": 1,
+      "nomeCompleto": "Antonio"
+    },
+    {
+      "id": 10,
+      "nomeCompleto": "Fernado Rodrigues",
+      "email": "fernando@email.com",
+      "cidadeId": "121"
+    },
+    {
+      "id": 11,
+      "nomeCompleto": "Elisabeth Rodrigues",
+      "email": "beth@email.com",
+      "cidadeId": 3
+    },
+    {
+      "nomeCompleto": "Fernando Rodrigues",
+      "email": "fernando@email.com",
+      "cidadeId": 1,
+      "id": 12
+    },
+    {
+      "nomeCompleto": "Elisabeth Rodrigues",
+      "email": "elisabeth@email.com",
+      "cidadeId": 3,
+      "id": 13
+    },
+    {
+      "nomeCompleto": "João Carlos",
+      "email": "joao@email.com",
+      "cidadeId": 2,
+      "id": 14
+    }
+  ],
+  "auth":{
+    "accessToken":"ssssssss.aaaaaaaaaaaaaaa.bbbbbbbbbbb"
+  }
 }
